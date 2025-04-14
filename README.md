@@ -10,8 +10,14 @@ LLM部分寄托于，TTS上，暂时使用的是豆包的doubao-1-5-pro-256k-250
 第三部分为LLM语音合成，使用开源项目GPT-SoVIT(https://github.com/RVC-Boss/GPT-SoVITS)
 项目下载参考连接(https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/dkxgpiy9zb96hob4#KTvnO)
 
-项目部署，
-1：ASR部署，
-
+项目部署:
+由于ws的funasr库和GPT-SoVITS的库冲突，所以两者分开部署
+1：ASR部署
+'''
+#使用aconda创建环境
+conda create -n sensevoice python=3.9
+conda activate sensevoice
+pip install -r requestmentes
+'''
 
 本项目基于https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs修改完成
