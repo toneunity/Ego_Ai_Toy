@@ -13,11 +13,36 @@ LLM部分寄托于，TTS上，暂时使用的是豆包的doubao-1-5-pro-256k-250
 项目部署:
 由于ws的funasr库和GPT-SoVITS的库冲突，所以两者分开部署
 1：ASR部署
-'''ruby
+```ruby
   #使用aconda创建环境
   conda create -n sensevoice python=3.9
   conda activate sensevoice
   pip install -r requirements.txt
-'''
+  python wss_socket.py
+```
+2:GPT-SoVITS下载
+windows电脑可以直接下载整合包，然后进行修改
+从连接(https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/dkxgpiy9zb96hob4#KTvnO)下载最新的整合包
+然后再**火山引擎模型广场开通模型服务**[https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW]
+将api_key填入文件doubao.py指定位置。将文件api_v2_1.py和文件doubao.py放到GPT-SoVITS根目录下，在根目录下打开com窗口
+```
+  runtime\python.exe runtime\Scripts\pip.exe install 'volcengine-python-sdk[ark]'
+  runtime\python.exe api_v2_1.py
+```
+3:esp32代码烧录
+使用vscode上的platformio配置烧录
+在烧录前进行esp32的连线
 
-本项目基于https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs修改完成
+inmp441 -> esp32 -> max98357
+|inmp441|esp32|  
+|-------|-----|
+|GND    |GND  |
+|VDD    |3.3v |
+|SD     |22   |
+|SCK    |4    |
+|WS     |15   |
+可以在I2S.cpp文件和main.cpp文件下分别修改inmp441和max98357的引脚定义
+![image](https://github.com/user-attachments/assets/9267d6d4-a788-4c96-9956-8cf511b21bcc)
+![image](https://github.com/user-attachments/assets/6fd8161c-65bc-45ad-b41e-949a7c53a48d)
+
+本项目基于(https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs)修改完成
