@@ -41,6 +41,7 @@ inmp441 -> esp32 -> max98357
 |SD     |22   |
 |SCK    |4    |
 |WS     |15   |
+
 |max98357|esp32|
 |------- |-----|
 |GND     |GND  |
@@ -49,9 +50,11 @@ inmp441 -> esp32 -> max98357
 |BLCK    |26   |
 |Din     |27   |
 
-
 可以在I2S.cpp文件和main.cpp文件下分别修改inmp441和max98357的引脚定义
 ![image](https://github.com/user-attachments/assets/9267d6d4-a788-4c96-9956-8cf511b21bcc)
 ![image](https://github.com/user-attachments/assets/6fd8161c-65bc-45ad-b41e-949a7c53a48d)
 
+然后修改main.py文件夹下的ws地址和http地址
+![image](https://github.com/user-attachments/assets/cda02159-3338-467f-9426-77686e354c42)
+烧录成功重启可对话。
 本项目基于(https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs)修改完成
