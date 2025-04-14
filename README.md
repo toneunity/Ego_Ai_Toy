@@ -41,6 +41,15 @@ inmp441 -> esp32 -> max98357
 |SD     |22   |
 |SCK    |4    |
 |WS     |15   |
+|max98357|esp32|
+|------- |-----|
+|GND     |GND  |
+|Vin     |3.3v |
+|LRC     |25   |
+|BLCK    |26   |
+|Din     |27   |
+
+
 可以在I2S.cpp文件和main.cpp文件下分别修改inmp441和max98357的引脚定义
 ![image](https://github.com/user-attachments/assets/9267d6d4-a788-4c96-9956-8cf511b21bcc)
 ![image](https://github.com/user-attachments/assets/6fd8161c-65bc-45ad-b41e-949a7c53a48d)
