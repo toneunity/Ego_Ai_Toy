@@ -13,11 +13,11 @@ LLM部分寄托于，TTS上，暂时使用的是豆包的doubao-1-5-pro-256k-250
 项目部署:
 由于ws的funasr库和GPT-SoVITS的库冲突，所以两者分开部署
 1：ASR部署
-'''
-#使用aconda创建环境
-conda create -n sensevoice python=3.9
-conda activate sensevoice
-pip install -r requestmentes
+'''ruby
+  #使用aconda创建环境
+  conda create -n sensevoice python=3.9
+  conda activate sensevoice
+  pip install -r requirements.txt
 '''
 
 本项目基于https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs修改完成
