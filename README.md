@@ -1,4 +1,4 @@
-# AI_toy
+# Ego_AI_toy
 一个基于esp32的全部基于本地简易的AI聊天玩具，包含服务端的demo
 将聊天分为三部分
 第一部分：ASR部分 使用开源项目sensevoice(https://github.com/FunAudioLLM/SenseVoice)
@@ -57,4 +57,4 @@ inmp441 -> esp32 -> max98357
 然后修改main.py文件夹下的ws地址和http地址
 ![image](https://github.com/user-attachments/assets/cda02159-3338-467f-9426-77686e354c42)
 烧录成功重启可对话。
-本项目基于(https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs)修改完成
+本项目基于(https://github.com/MetaWu2077/Esp32_VoiceChat_LLMs) 修改完成
